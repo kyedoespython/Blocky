@@ -2,17 +2,18 @@
 
 {% block content %}
 
-<h1>Join the blocky community below</h1>
-<h2>Create an account</h2>
-<form action="/send_signup">
+<h1>Login to your blocky account</h1>
+
+<form action="/send_login">
 
     <input type="text" id="username" placeholder="Create a username" minlength="3" maxlength="20" required>
     <input type="email" id="email" placeholder="Connect your email" minlength="3" maxlength="100" required>
     <input type="password" id="password" placeholder="Create a password" minlength="6" maxlength="32" required>
 
-    <button type="submit">Create Account</button>
+    <button type="submit">Login</button>
     
-    <p>Already have an account? <a href="/login">Login</a></p>
+    <p>Dont have an account yet? <a href="/Join-Blocky">Join us</a></p>
+
 </form>
 
 {% endblock %}
