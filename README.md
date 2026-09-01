@@ -1,26 +1,81 @@
-<<<<<<< HEAD
--- Blocky: a database sandbox environment for creating, understanding and developing effective database layouts for development.
+Blocky — Simple, Modern Database Development
+Blocky is a lightweight, developer‑friendly toolkit designed to simplify database development. It provides a clean, intuitive interface for building, testing, and visualizing database structures without unnecessary complexity.
 
--- Blockys goal: to make creating databases easy, maintainable and secure with little to no cost upfront.
+Project Goal
+The goal of Blocky is to create an easy, accessible solution for database development. The project focuses on reducing friction, improving clarity, and offering a modern workflow for anyone working with databases, whether they are beginners or experienced developers.
 
--- Website page layout:
+Features
+Visual database builder for designing tables and relationships
 
-About page: 
-    -> signup:
-        -> auth:
-            -> login
+Simple schema editing and testing tools
 
-    -> login:
-        -> coming soon...
+Clean and responsive user interface
 
-Blocky Base config:
-    -> coming soon...
+Session‑based authentication for secure access
 
-01/09/2026 Updates:
-                - Added session tracking via a secret key import for keeping users logged in.
-                - password hashing for storing password securely
-=======
--- Blocky --
+Admin panel for privileged operations
 
-An open source database sandbox powered by flask.
->>>>>>> 019090d307e40bb0314f4555d74d87603a1d9028
+API endpoints for automation and external integration
+
+Lightweight Flask backend designed for extensibility
+
+Technology Stack
+Python (Flask)
+
+SQLite / MySQL / PostgreSQL
+
+HTML, CSS, JavaScript
+
+Jinja2 templating
+
+Session-based authentication
+
+Security
+Blocky follows secure development practices, including:
+
+Environment-based configuration
+
+Secret keys stored outside version control
+
+Protected admin routes
+
+Session cookies for authentication
+
+Clear project structure for safe collaboration
+
+Project Structure
+
+Blocky/
+│
+├── app/
+│   ├── routes.py
+│   ├── auth.py
+│   ├── models.py
+│   ├── templates/
+│   └── static/
+│
+├── instance/
+│   └── database.db
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+
+Future Plans
+Advanced admin dashboard
+
+Drag‑and‑drop schema designer
+
+Live database preview
+
+Import and export tools
+
+Dark mode
+
+Cloud synchronization options
+
+Contributing
+Contributions are welcome. If you have suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request.
+
+License
+This project is licensed under the MIT License.
