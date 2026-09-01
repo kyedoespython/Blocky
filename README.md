@@ -1,2 +1,3 @@
-Anyone who wants to implement updates to my code feel free
-this is a learning project for beginners.
+-- Blocky --
+
+An open source database sandbox powered by flask.
