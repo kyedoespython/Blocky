@@ -1,29 +1,43 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="{{ url_for('static', filename='js/about.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+
 {% block content %}
 
 <a href="/Join-Blocky">
     <button>join us</button>
 </a>
 
-<h1>Blocky Builder</h1>
+<h1 class="MainHeading">Blocky Builder</h1>
 
 <h2>Why blocky builder is good for you</h2>
 
-<div class="Block1">
+<div class="BlockA">
     <ul>
-        <li>Provides easy to use configuration options</li>
-        <li>Gives you a test environment for simulating real scenarios</li>
-        <li>Uses up to date database structures</li>
+        <li>Faster setup for new projects</li>
+        <li>Clear structure for growing data</li>
+        <li>Reduces early stage technical overhead</li>
     </ul>
 </div>
 
-<div class="Block2">
+<div class="BlockB">
     <ul>
-        <li>Allows you to create a free account</li>
-        <li>Gives you the ability to save your configurations</li>
-        <li>Lets you share your configurations with others</li>
+        <li>Easy configuration for non‑technical founders</li>
+        <li>Consistent schemas across your team</li>
+        <li>Prevents costly mistakes during scaling</li>
     </ul>
 </div>
+
+<div class="BlockC">
+    <ul>
+        <li>Built‑in testing for real scenarios</li>
+        <li>Instant feedback on configuration changes</li>
+        <li>Reliable foundation for future automation</li>
+    </ul>
+</div>
+
 
 {% endblock %}

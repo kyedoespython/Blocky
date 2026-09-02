@@ -1,0 +1,42 @@
+button {
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    width : 150px;
+    margin: 10px;
+    padding: 12px;
+}
+
+.dash {
+    text-align: center;
+}
+
+.side_buttons {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    width: 170px;
+}
+
+.side_buttons :hover {
+    background-color: rgb(138, 138, 138)
+}
+
+.side_button_heading {
+    color: rgb(0, 0, 0);
+    margin-right: 50px;
+}
+
+.drag-block {
+    width: 300px;
+    height: 300px;
+    background: white;
+    border: 2px solid #222;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: grab;
+}

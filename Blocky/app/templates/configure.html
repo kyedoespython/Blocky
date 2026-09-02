@@ -1,7 +1,27 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="{{ url_for('static', filename='scripts/configure.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/configure.css') }}">
+{% endblock %}
+
 {% block content %}
 
-<h1>Configure your experience</h1>
+<div class="top_nav">
+    <h3 class="dash">Dashboard</h3>
+</div>
+
+<h3 class="side_button_heading">Navigation</h3>
+<div class="side_buttons">
+    <button class="model">Database Model</button>
+    <button class="dashboard">Block Swarm</button>
+    <button class="simulation">Builds</button>
+    <button class="guide">Beginner Guide</button>
+</div>
+
+<div class="drag-block">
+    <label for="DBName">Database Name</label>
+</div>
+
 
 {% endblock %}
