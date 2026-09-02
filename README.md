@@ -15,6 +15,6 @@ About page:
 Blocky Base config:
     -> coming soon...
 
-#COMING SOON: Blocky builder page, table creation, row creation, buttons, better designs, more indepth information on building structures, etc.
-
---- WORK ON: AUTH BACKEND / login and signup page functionality with db backend
+01/09/2026 Updates:
+                - Added session tracking via a secret key import for keeping users logged in.
+                - password hashing for storing password securely

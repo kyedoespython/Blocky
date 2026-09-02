@@ -1,7 +1,12 @@
 FLASK_APP=app.py
 FLASK_DEBUG=1
 
-Main=sqlite:///Blocky.db
-Backup=sqlite:///BlockyBackup.db
+SECRET_KEY=BlockyHostKey0099
+
+DATABASE_URI=Blocky.db
+
+DATABASE_URI_BACKUP1=BlockBackup1.db
+DATABASE_URI_BACKUP2=BlockBackup2.db
+DATABASE_URI_BACKUP3=BlockBackup3.db
 
 SQLALCHEMY_TRACK_MODIFICATIONS=False
