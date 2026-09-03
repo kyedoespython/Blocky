@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="{{ url_for('static', filename='js/signup.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
 {% block content %}
 
 <a href="/about">
-    <button>About</button>
+    <button class="About">About</button>
 </a>
-<h1>Join the blocky community below</h1>
 <h2>Create an account</h2>
 <form action="/send_signup" method="POST">
 

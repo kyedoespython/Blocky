@@ -21,9 +21,9 @@ def admin_required(f):
         from models import Users
         user = Users.query.get(session["user_id"])
 
-        if not user.is_admin:
+        if not user or not user.is_admin:
             flash("Admins only", "error")
-            return redirect(url_for("main.configure"))
+            return redirect(url_for("main.login"))
 
         return f(*args, **kwargs)
     return wrapper

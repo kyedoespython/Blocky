@@ -1,42 +1,65 @@
 {% extends "base.html" %}
 
 {% block head %}
-<script src="{{ url_for('static', filename='js/about.js') }}" defer></script>
+<script src="{{ url_for('static', filename='scripts/about.js') }}" defer></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 {% endblock %}
 
 {% block content %}
 
-<a href="/Join-Blocky">
-    <button>join us</button>
-</a>
+<div class="about-page">
 
-<h1 class="MainHeading">Blocky Builder</h1>
+    <nav class="top-nav">
+        <div class="logo">BLOCKY</div>
 
-<h2>Why blocky builder is good for you</h2>
+        <a href="/Join-Blocky">Join us</a>
+    </nav>
 
-<div class="BlockA">
-    <ul>
-        <li>Faster setup for new projects</li>
-        <li>Clear structure for growing data</li>
-        <li>Reduces early stage technical overhead</li>
-    </ul>
-</div>
+    <main class="hero">
 
-<div class="BlockB">
-    <ul>
-        <li>Easy configuration for non‑technical founders</li>
-        <li>Consistent schemas across your team</li>
-        <li>Prevents costly mistakes during scaling</li>
-    </ul>
-</div>
+        <div class="hero-text">
 
-<div class="BlockC">
-    <ul>
-        <li>Built‑in testing for real scenarios</li>
-        <li>Instant feedback on configuration changes</li>
-        <li>Reliable foundation for future automation</li>
-    </ul>
+            <p class="eyebrow">BUILD BETTER</p>
+
+            <h1>Blocky Builder</h1>
+
+            <p class="description">
+                Build your database structure without the usual complexity.
+            </p>
+
+            <a href="/Join-Blocky" class="hero-button">
+                Get started
+            </a>
+
+        </div>
+
+        <div class="portal">
+
+            <div class="portal-ring"></div>
+
+            <div class="portal-content">
+
+                <span class="slide-number">01 / 03</span>
+
+                <h2>Build</h2>
+
+                <p>
+                    Create your database structure quickly
+                    and keep everything organised.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="slide-label">
+        <span>SCROLL</span>
+        <span class="line"></span>
+        <span>EXPLORE</span>
+    </div>
+
 </div>
 
 

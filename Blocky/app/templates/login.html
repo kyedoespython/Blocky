@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
+{% block head %}
+<script src="{{ url_for('static', filename='js/login.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+{% endblock %}
+
 {% block content %}
 
-<h1>Login to your blocky account</h1>
+<h2>Login to your blocky account</h2>
 
 <form action="/send_login" method="POST">
 

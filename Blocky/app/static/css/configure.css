@@ -1,42 +1,213 @@
-button {
-    border: none;
-    background-color: transparent;
-    border-radius: 5px;
-    width : 150px;
-    margin: 10px;
-    padding: 12px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: #090a0c;
+    color: #f2f2f2;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+}
+
+.top_nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 28px;
+
+    background: #0d0f12;
+
+    border-bottom: 1px solid #202329;
+
+    z-index: 20;
 }
 
 .dash {
-    text-align: center;
-}
+    margin: 0;
 
-.side_buttons {
-    display: flex;
-    flex-direction: column;
-    border-style: solid;
-    width: 170px;
-}
+    font-size: 16px;
+    font-weight: 600;
 
-.side_buttons :hover {
-    background-color: rgb(138, 138, 138)
+    letter-spacing: -0.3px;
 }
 
 .side_button_heading {
-    color: rgb(0, 0, 0);
-    margin-right: 50px;
+    position: fixed;
+
+    top: 82px;
+    left: 24px;
+
+    margin: 0;
+
+    color: #656a73;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    z-index: 10;
+}
+
+.side_buttons {
+    position: fixed;
+
+    top: 110px;
+    left: 14px;
+
+    width: 190px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px;
+
+    border: none;
+
+    z-index: 10;
+}
+
+.side_buttons button {
+    width: 100%;
+
+    margin: 2px 0;
+    padding: 11px 13px;
+
+    background: transparent;
+
+    color: #777d86;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border 0.2s ease;
+}
+
+.side_buttons button:hover {
+    background: #15181d;
+
+    color: #ffffff;
+
+    border-color: #24282e;
+}
+
+.side_buttons .model {
+    background: #171a1f;
+
+    color: #ffffff;
+
+    border-color: #292e35;
 }
 
 .drag-block {
-    width: 300px;
-    height: 300px;
-    background: white;
-    border: 2px solid #222;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
     position: absolute;
+
     left: 50%;
     top: 50%;
+
+    width: 300px;
+    min-height: 260px;
+
+    padding: 0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #16191e,
+            #101216
+        );
+
+    border: 1px solid #30353c;
+    border-radius: 8px;
+
     transform: translate(-50%, -50%);
+
     cursor: grab;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.drag-block:active {
+    cursor: grabbing;
+}
+
+.drag-block::before {
+    content: "TABLE";
+
+    display: block;
+
+    padding: 13px 16px;
+
+    background: #1b1e23;
+
+    border-bottom: 1px solid #30353c;
+
+    color: #777d86;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.drag-block label {
+    display: block;
+
+    padding: 20px 18px 8px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.drag-block label::after {
+    content: "Database object";
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #666c75;
+
+    font-size: 11px;
+    font-weight: 400;
+}
+
+@media (max-width: 700px) {
+
+    .side_buttons {
+        width: 150px;
+    }
+
+    .drag-block {
+        width: 280px;
+    }
+
 }
