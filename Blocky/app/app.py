@@ -1,7 +1,6 @@
 from flask import Flask
 from extensions import db
 import os
-import secrets
 
 def create_app():
     app = Flask(__name__)
@@ -15,13 +14,15 @@ def create_app():
     os.makedirs(instance_dir, exist_ok=True)
     os.makedirs(backups_dir, exist_ok=True)
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(instance_dir, os.getenv("DATABASE_URI"))}" #Main database
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URI")
 
     app.config["SQLALCHEMY_BINDS"] = {
-        "backup1": f"sqlite:///{os.path.join(backups_dir, os.getenv("DATABASE_URI_BACKUP1"))}", #backup1
-        "backup2": f"sqlite:///{os.path.join(backups_dir, os.getenv("DATABASE_URI_BACKUP2"))}", #backup2
-        "backup3": f"sqlite:///{os.path.join(backups_dir, os.getenv("DATABASE_URI_BACKUP3"))}", #backup3
+        "backup1": f"sqlite:///{os.path.join(backups_dir, os.getenv('DATABASE_URI_BACKUP1'))}",
+        "backup2": f"sqlite:///{os.path.join(backups_dir, os.getenv('DATABASE_URI_BACKUP2'))}",
+        "backup3": f"sqlite:///{os.path.join(backups_dir, os.getenv('DATABASE_URI_BACKUP3'))}",
     }
+
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
 
@@ -29,6 +30,6 @@ def create_app():
     app.register_blueprint(main)
 
     with app.app_context():
-        db.create_all()  # creates ALL DBs: main + binds
+        db.create_all()
 
     return app
