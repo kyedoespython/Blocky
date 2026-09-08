@@ -1,5 +1,17 @@
-.env
-.flaskenv
+# Python
 __pycache__/
-instance/
-*.sqlite3
+*.py[cod]
+.venv/
+venv/
+backend/.env
+backend/.flaskenv
+backend/instance/*.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Editors
+.vscode/
+.idea/
